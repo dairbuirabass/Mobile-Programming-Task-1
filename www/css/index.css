@@ -27,11 +27,11 @@ body {
     background-color:#E4E4E4;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
-    height:100%;
+    /* height:100%;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
-    width:100%;
+    width:100%; */
 }
 
 /* Portrait layout (default) */
@@ -39,29 +39,55 @@ body {
 }
 
 #imageContainer {
-    display: flex;
     margin: 0 auto;
-    width: 372px;
-    height: 372px;
+    border: 1px solid #000000;
+    border-radius: 60px;
+    position: relative;
+    width: 100%;
+    height: 384px;
+    overflow: hidden;
 }
 
 #displayedImage {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 #buttonsContainer {
+    padding: 12px;
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
 }
 
 .customButton {
-  color: blue;
-  border-radius: 10px;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.customButton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 
 /* Landscape layout (with min-width) */
